@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <hr>
+    <h2>Upload single file</h2>
+    <div class="row">
+        <form method="post" action="/blogs/upload" enctype="multipart/form-data">
+            Title: <input type="text" name="title" placeholder="title here" /><br>
+            File: <input type="file" name="blogimg" /><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <br><br>
+    {{!-- upload multiple files --}}
+    <h2>Upload multiple file, max: 5</h2>
+    <div class="row">
+        <form method="post" action="/blogs/uploads" enctype="multipart/form-data">
+            Title: <input type="text" name="title" placeholder="title here" /><br>
+            File: <input type="file" name="blogimg" multiple /><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
