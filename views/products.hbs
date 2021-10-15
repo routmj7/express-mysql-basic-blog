@@ -1,0 +1,28 @@
+<div class="container">
+
+    <h1>Express Mysql database connection</h1>
+    <p>Welcome to <b>{{title}}</b>.</p>
+
+    <a href="/products/create-product" class="btn btn-success my-3">Add new product</a>
+    <table class="table table-striped">
+        <thead>
+            <th>#Id</th>
+            <th>Product name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.price}}</td>
+                <td>
+                    <a href="/products/edit-form/{{this.id}}" class="btn btn-sm btn-warning">Edit</a>
+                    <a href="/products/delete-product/{{this.id}}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
